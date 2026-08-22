@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
+import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
 import {
   PageId,
   WarehouseLocation,
@@ -138,6 +138,10 @@ interface AppContextType {
     forecastAccuracy: string;
     forecastAccuracySub: string;
   };
+  
+  // Theme
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -185,6 +189,21 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeRecommendationModal, setActiveRecommendationModal] = useState<AttentionItem | null>(null);
 
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  // Theme state
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   // Simulation state
   const [simParams, setSimParams] = useState<SimulationParameters>({
@@ -668,6 +687,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         applyPreset,
         executeMitigation,
         executiveMetrics,
+        theme,
+        toggleTheme,
       }}
     >
       {children}

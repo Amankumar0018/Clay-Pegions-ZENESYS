@@ -10,6 +10,8 @@ import {
   Layers,
   Mic,
   Sparkles,
+  Moon,
+  Sun,
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { WarehouseLocation } from '../../types';
@@ -23,6 +25,8 @@ export const TopBar: React.FC = () => {
     setCurrentPage,
     addToast,
     setIsVoiceModeOpen,
+    theme,
+    toggleTheme,
   } = useApp();
 
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -127,6 +131,20 @@ export const TopBar: React.FC = () => {
           <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
           <span>NetSuite Demo / Sandbox</span>
         </div>
+
+        {/* Theme Toggle */}
+        <button
+          id="top-bar-theme-toggle"
+          onClick={toggleTheme}
+          className="p-2 text-[#6A665E] hover:text-[#232220] hover:bg-[#EFECE5] rounded-md transition-colors"
+          title={theme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          {theme === 'dark' ? (
+            <Sun className="w-4 h-4" />
+          ) : (
+            <Moon className="w-4 h-4" />
+          )}
+        </button>
 
         {/* Notification Bell */}
         <button
