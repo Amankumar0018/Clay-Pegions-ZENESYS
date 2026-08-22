@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Node
+node_modules/
+dist/
+
+# Local databases
+*.db
+
+# Temporary inspection files
+temp_vantage_inspect/
+frontend-ai-backup/
