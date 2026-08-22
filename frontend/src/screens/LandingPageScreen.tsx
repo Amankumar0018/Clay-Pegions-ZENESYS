@@ -63,9 +63,9 @@ export const LandingPageScreen: React.FC = () => {
             <Sparkles className="w-4 h-4" />
           </div>
           <div>
-            <span className="font-bold text-base tracking-tight text-[#232220]">Miley</span>
+            <span className="font-bold text-base tracking-tight text-[#232220]">MILEY</span>
             <span className="text-[10px] ml-2 font-medium px-2 py-0.5 rounded-full bg-[#F0EAE1] text-[#7A5043]">
-              Your All-in-One Assistant
+              AI Supply Chain Copilot for NetSuite
             </span>
           </div>
         </div>
@@ -96,18 +96,18 @@ export const LandingPageScreen: React.FC = () => {
         {/* Subtle Pill Tag */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2EDE4] border border-[#E3DDD1] text-xs font-medium text-[#735A4D] mb-6">
           <Sparkles className="w-3.5 h-3.5 text-[#C86D51]" />
-          <span>Intelligent. Human. Tactile. Reliable.</span>
+          <span>MILEY × NetSuite Intelligence Layer</span>
         </div>
 
         {/* Primary Headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#232220] max-w-3xl leading-[1.12]">
-          Everything you need. <br />
-          <span className="text-[#C86D51]">Just ask Miley.</span>
+          NetSuite records what happened. <br />
+          <span className="text-[#C86D51]">MILEY predicts what happens next.</span>
         </h1>
 
         {/* Supporting Copy */}
         <p className="mt-5 text-base sm:text-lg text-[#6A665E] max-w-2xl leading-relaxed">
-          Miley brings everyday AI assistance, task organization, document intelligence, and operational decision-making into one unified, calm workspace.
+          MILEY is an AI-powered Supply Chain Copilot that sits on top of NetSuite and turns ERP data into predictive, explainable, and executable business decisions.
         </p>
 
         {/* Action Buttons */}

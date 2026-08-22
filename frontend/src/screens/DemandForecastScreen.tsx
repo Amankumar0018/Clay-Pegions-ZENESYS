@@ -146,7 +146,7 @@ export const DemandForecastScreen: React.FC = () => {
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-3 h-0.5 bg-[#0F5B5C] border-t border-dashed"></span>
-              <span className="text-[#0F5B5C] font-medium">NEXUS Forecast</span>
+              <span className="text-[#0F5B5C] font-medium">MILEY Forecast</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 bg-[#0F5B5C]/15 rounded-xs"></span>

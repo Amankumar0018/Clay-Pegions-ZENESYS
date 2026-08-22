@@ -20,8 +20,8 @@ from .models import Product, Supplier, Sales, Inventory, Order
 
 
 app = FastAPI(
-    title="NEXUS AI - Demand & Fulfillment API",
-    description="Enterprise API layer for demand forecasting, inventory risk detection, procurement recommendations, and order tracking.",
+    title="MILEY - AI Supply Chain Copilot for NetSuite",
+    description="Enterprise API layer for demand forecasting, inventory risk detection, procurement recommendations, and NetSuite order execution.",
     version="0.1.0"
 )
 
@@ -136,7 +136,7 @@ class ChatQueryRequest(BaseModel):
 @app.get("/")
 def read_root():
     return {
-        "platform": "NEXUS AI",
+        "platform": "MILEY",
         "status": "Operational",
         "version": "0.1.0",
         "docs_url": "/docs"

@@ -105,7 +105,7 @@ export const ReviewRecommendationModal: React.FC = () => {
           {/* Explainability Breakdown */}
           <div className="space-y-2">
             <h4 className="text-xs font-bold text-[#1C1D1F] uppercase tracking-wider text-[11px]">
-              Why NEXUS Recommends This Decision
+              Why MILEY Recommends This Decision
             </h4>
             <div className="text-xs text-[#4A4D46] space-y-2 leading-relaxed bg-white border border-[#EDEDE8] p-3.5 rounded-lg">
               <p>

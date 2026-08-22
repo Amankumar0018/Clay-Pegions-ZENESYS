@@ -50,7 +50,7 @@ def process_ai_query(user_query, products_df, suppliers_df, sales_df, orders_df,
                 summary_list.append(f"• **{r['product_name']}**: Reorder **{qty} units** via *{supplier_name}* (Est. Cost: ${est_cost:,.2f})")
 
             response_text = (
-                f"🛒 **NEXUS AI Procurement Recommendation:**\n\n"
+                f"🛒 **MILEY Procurement Recommendation:**\n\n"
                 f"Based on current lead times, safety stock calculations, and predicted demand, you should place **{len(reorders)} purchase orders** totaling **${total_est_spend:,.2f}**:\n\n"
                 + "\n".join(summary_list)
             )
@@ -125,7 +125,7 @@ def process_ai_query(user_query, products_df, suppliers_df, sales_df, orders_df,
 
     # Fallback / General Query
     response_text = (
-        f"🤖 **NEXUS AI Decision Support System**\n\n"
+        f"🤖 **MILEY AI Supply Chain Copilot**\n\n"
         f"I am actively monitoring **{len(products_df)} products**, **{len(suppliers_df)} suppliers**, and **{len(orders_df)} active orders**.\n\n"
         f"You can ask me questions such as:\n"
         f"• *\"Which products are at risk of stockout?\"*\n"

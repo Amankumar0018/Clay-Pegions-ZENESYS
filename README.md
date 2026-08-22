@@ -1,10 +1,8 @@
-# 🚀 NEXUS AI
+# 🚀 MILEY — AI Supply Chain Copilot for NetSuite
 
-### Intelligent Demand & Fulfillment Platform
+> **NetSuite records what happened. MILEY predicts what happens next, explains why, recommends what to do, and turns that decision into action.**
 
-> **Predict demand. Detect risk. Recommend action. Monitor fulfillment.**
-
-NEXUS AI is an AI-powered enterprise decision-support platform focused on **demand forecasting and order fulfillment**. It analyzes historical sales, inventory, supplier, and order data to forecast future demand, identify stockout and fulfillment risks, recommend replenishment actions and suitable vendors, and monitor orders through delivery.
+MILEY is an AI-powered Supply Chain Copilot that sits on top of NetSuite and turns ERP data into predictive, explainable, and executable business decisions. It analyzes historical sales, inventory, supplier, and order data to forecast future demand, identify stockout and fulfillment risks, recommend replenishment actions and suitable vendors, and execute purchase orders in NetSuite.
 
 Built for the **ZENESYS Hackathon**.
 

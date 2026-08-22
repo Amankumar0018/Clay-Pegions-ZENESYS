@@ -102,7 +102,7 @@ export const ProductDetailDrawer: React.FC = () => {
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#0F5B5C] flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
-                  NEXUS Prescriptive Guidance
+                  MILEY Prescriptive Guidance
                 </span>
                 <span className="text-[11px] font-mono font-semibold text-[#0F5B5C]">
                   {product.recommendedPurchaseQty > 0 ? `PO Target: ${product.recommendedPurchaseQty} units` : 'Buffer Optimal'}

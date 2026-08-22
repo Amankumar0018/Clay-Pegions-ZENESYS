@@ -134,7 +134,7 @@ export const SearchModal: React.FC = () => {
                   className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-xs text-[#333] hover:bg-[#F4F4F1] transition-colors"
                 >
                   <Building2 className="w-3.5 h-3.5 text-[#0F5B5C]" />
-                  <span>Ask NEXUS Assistant</span>
+                  <span>Ask MILEY Assistant</span>
                 </button>
               </div>
             </div>
