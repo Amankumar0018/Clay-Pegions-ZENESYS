@@ -1,0 +1,21 @@
+risk_id,product_id,evaluation_date,current_stock,forecast_demand_7d,risk_level,days_to_stockout,reason
+1,P001,2026-08-21,116,185.13,MEDIUM,4.39,Inventory buffer is below the recommended planning threshold.
+2,P002,2026-08-21,125,596.91,HIGH,1.47,Projected demand is materially higher than available inventory.
+3,P003,2026-08-21,87,729.14,HIGH,0.84,Projected demand is materially higher than available inventory.
+4,P004,2026-08-21,114,562.0,HIGH,1.42,Projected demand is materially higher than available inventory.
+5,P005,2026-08-21,103,392.74,HIGH,1.84,Projected demand is materially higher than available inventory.
+6,P006,2026-08-21,246,750.84,HIGH,2.29,Projected demand is materially higher than available inventory.
+7,P007,2026-08-21,289,301.24,LOW,6.72,Inventory is sufficient for projected near-term demand.
+8,P008,2026-08-21,107,931.72,HIGH,0.8,Projected demand is materially higher than available inventory.
+9,P009,2026-08-21,170,293.83,MEDIUM,4.05,Inventory buffer is below the recommended planning threshold.
+10,P010,2026-08-21,309,421.56,MEDIUM,5.13,Inventory buffer is below the recommended planning threshold.
+11,P011,2026-08-21,0,324.51,HIGH,0.0,Projected demand is materially higher than available inventory.
+12,P012,2026-08-21,428,960.56,MEDIUM,3.12,Inventory buffer is below the recommended planning threshold.
+13,P013,2026-08-21,215,242.78,LOW,6.2,Inventory is sufficient for projected near-term demand.
+14,P014,2026-08-21,129,687.89,HIGH,1.31,Projected demand is materially higher than available inventory.
+15,P015,2026-08-21,185,475.78,MEDIUM,2.72,Inventory buffer is below the recommended planning threshold.
+16,P016,2026-08-21,117,233.0,MEDIUM,3.52,Inventory buffer is below the recommended planning threshold.
+17,P017,2026-08-21,168,314.98,MEDIUM,3.73,Inventory buffer is below the recommended planning threshold.
+18,P018,2026-08-21,211,330.05,MEDIUM,4.48,Inventory buffer is below the recommended planning threshold.
+19,P019,2026-08-21,0,594.79,HIGH,0.0,Projected demand is materially higher than available inventory.
+20,P020,2026-08-21,203,306.25,MEDIUM,4.64,Inventory buffer is below the recommended planning threshold.

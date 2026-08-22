@@ -1,0 +1,21 @@
+product_id,product_name,category,unit_cost,selling_price,lead_time_days,safety_stock,reorder_point,active
+P001,Galaxy Pro 15 Laptop,Laptops,62000,74999,7,35,80,True
+P002,ZenBook Air 14 Laptop,Laptops,58000,69999,6,30,70,True
+P003,ThinkPad Business 14,Laptops,54000,67999,8,25,65,True
+P004,27-inch 4K Monitor,Monitors,18500,24999,5,30,75,True
+P005,24-inch IPS Monitor,Monitors,10500,14999,4,35,90,True
+P006,Mechanical RGB Keyboard,Accessories,4200,6499,5,50,120,True
+P007,Wireless Office Keyboard,Accessories,1800,2999,4,60,140,True
+P008,Ergonomic Wireless Mouse,Accessories,950,1699,4,75,180,True
+P009,Noise Cancelling Headphones,Audio,5200,7999,6,45,110,True
+P010,Wireless Earbuds Pro,Audio,3100,4999,5,60,150,True
+P011,USB-C Docking Station,Accessories,6800,9999,7,30,70,True
+P012,65W USB-C Charger,Accessories,1450,2499,4,80,200,True
+P013,2TB NVMe SSD,Storage,7800,10999,6,40,100,True
+P014,1TB NVMe SSD,Storage,4200,6499,5,50,130,True
+P015,16GB DDR5 RAM,Components,3800,5999,6,45,110,True
+P016,32GB DDR5 RAM,Components,7200,10499,6,30,80,True
+P017,WiFi 6 Router,Networking,4200,6499,5,40,100,True
+P018,8-Port Gigabit Switch,Networking,2100,3299,4,50,120,True
+P019,1080p Business Webcam,Peripherals,2600,3999,5,55,130,True
+P020,Portable SSD 1TB,Storage,5200,7999,6,45,110,True
