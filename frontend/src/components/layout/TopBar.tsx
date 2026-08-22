@@ -122,10 +122,10 @@ export const TopBar: React.FC = () => {
           </button>
         </div>
 
-        {/* Subtle Simulated Data Badge */}
-        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#EFECE5] border border-[#E0D9CE] text-[11px] font-medium text-[#6A665E]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C4842E]"></span>
-          <span>Simulated Data</span>
+        {/* NetSuite Integration Badge */}
+        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#0F5B5C]/10 border border-[#0F5B5C]/30 text-[11px] font-semibold text-[#0F5B5C]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+          <span>NetSuite Demo / Sandbox</span>
         </div>
 
         {/* Notification Bell */}

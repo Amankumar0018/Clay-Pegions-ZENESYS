@@ -17,6 +17,7 @@ import { TopProductsCard } from '../components/dashboard/TopProductsCard';
 import { SupplierPerformanceCard } from '../components/dashboard/SupplierPerformanceCard';
 import { NeedsAttentionCard } from '../components/dashboard/NeedsAttentionCard';
 import { AIInsightsCard } from '../components/dashboard/AIInsightsCard';
+import { AIDecisionCenterCard } from '../components/dashboard/AIDecisionCenterCard';
 
 const TIME_PERIODS: TimePeriod[] = ['Today', '7 days', '30 days', '90 days'];
 const CATEGORIES = [
@@ -83,6 +84,11 @@ export const CommandCenterScreen: React.FC = () => {
           </button>
         </div>
       </div>
+
+      {/* Hero AI Decision Center Section */}
+      <section id="ai-decision-center-hero-section">
+        <AIDecisionCenterCard />
+      </section>
 
       {/* Global Filter Bar */}
       <div

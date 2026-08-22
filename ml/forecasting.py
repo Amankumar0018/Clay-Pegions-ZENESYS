@@ -28,10 +28,36 @@ class NexusForecastingEngine:
     def _load_data(self):
         if os.path.exists(self.sales_path):
             self.df_sales = pd.read_csv(self.sales_path)
+
             date_col = 'date' if 'date' in self.df_sales.columns else 'sale_date'
-            self.df_sales[date_col] = pd.to_datetime(self.df_sales[date_col])
+            self.df_sales[date_col] = pd.to_datetime(
+                self.df_sales[date_col]
+            )
+
             if date_col != 'date':
-                self.df_sales.rename(columns={date_col: 'date'}, inplace=True)
+                self.df_sales.rename(
+                    columns={date_col: 'date'},
+                    inplace=True
+                )
+
+            if 'units_sold' in self.df_sales.columns:
+                self.df_sales.rename(
+                    columns={'units_sold': 'quantity_sold'},
+                    inplace=True
+                )
+
+            if 'promotion' in self.df_sales.columns:
+                self.df_sales['promotion_active'] = (
+                    self.df_sales['promotion'].astype(int)
+                )
+            else:
+                self.df_sales['promotion_active'] = 0
+
+            self.df_sales['holiday_flag'] = self.df_sales['date'].apply(
+                lambda d: 1
+                if d.month == 12 and d.day in (24, 25, 31)
+                else 0
+            )
         else:
             self.df_sales = pd.DataFrame()
 

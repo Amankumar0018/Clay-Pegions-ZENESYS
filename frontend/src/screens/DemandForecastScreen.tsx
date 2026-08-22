@@ -34,13 +34,36 @@ export const DemandForecastScreen: React.FC = () => {
 
   const [selectedProductName, setSelectedProductName] = useState('Wireless Earbuds');
   const [horizon, setHorizon] = useState<'7D' | '30D' | '90D'>('7D');
+  const [apiForecast, setApiForecast] = React.useState<any[] | null>(null);
 
   const selectedProduct =
     products.find((p) => p.name === selectedProductName) || products[0];
 
-  const chartDataSet =
+  React.useEffect(() => {
+    const prodId = selectedProduct?.id || 'P001';
+    fetch(`http://127.0.0.1:8000/api/forecast/${prodId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          const mapped = data.map((item) => ({
+            date: item.date.slice(5),
+            actual: item.actual,
+            forecast: item.forecast_nexus,
+            baseline: item.forecast_baseline,
+            p10: item.p10,
+            p90: item.p90,
+          }));
+          setApiForecast(mapped);
+        }
+      })
+      .catch(() => setApiForecast(null));
+  }, [selectedProduct]);
+
+  const fallbackDataSet =
     HISTORICAL_AND_FORECAST_DATA[selectedProductName as keyof typeof HISTORICAL_AND_FORECAST_DATA]?.[horizon] ||
     HISTORICAL_AND_FORECAST_DATA['Wireless Earbuds'][horizon];
+
+  const chartDataSet = apiForecast || fallbackDataSet;
 
   return (
     <div id="demand-forecast-view" className="space-y-6 animate-in fade-in duration-200">

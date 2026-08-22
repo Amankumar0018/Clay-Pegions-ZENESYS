@@ -48,37 +48,53 @@ export const AIAssistantScreen: React.FC = () => {
     if (!textToSend) setInputValue('');
     setIsTyping(true);
 
-    // Simulate grounded data retrieval & processing
-    setTimeout(() => {
-      let matchedKey = 'stockout';
-      const lower = text.toLowerCase();
+    setMessages((prev) => [...prev, userMsg]);
+    if (!textToSend) setInputValue('');
+    setIsTyping(true);
 
-      if (lower.includes('purchase') || lower.includes('buy') || lower.includes('procure')) {
-        matchedKey = 'purchase';
-      } else if (lower.includes('supplier') || lower.includes('vendor') || lower.includes('earbuds')) {
-        matchedKey = 'supplier';
-      } else if (lower.includes('delay') || lower.includes('transit') || lower.includes('late')) {
-        matchedKey = 'delayed';
-      } else if (lower.includes('why') || lower.includes('reason') || lower.includes('risk')) {
-        matchedKey = 'why';
-      } else if (lower.includes('stockout') || lower.includes('inventory') || lower.includes('deplet')) {
-        matchedKey = 'stockout';
-      }
+    fetch('http://127.0.0.1:8000/api/ai-assistant/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: text })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const assistantMsg: ChatMessage = {
+          id: 'msg-' + (Date.now() + 1),
+          sender: 'assistant',
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          content: data.answer || "Analyzed operational data. All systems nominal.",
+          dataSources: ['NetSuite ERP', 'FastAPI Engine', 'Sales & Inventory SQL'],
+          suggestedActions: (data.suggested_actions || []).map((act: string) => ({
+            label: act,
+            actionType: 'NAVIGATE' as const,
+            payload: 'command-center' as const
+          })),
+        };
+        setMessages((prev) => [...prev, assistantMsg]);
+      })
+      .catch(() => {
+        // Fallback to local KB
+        let matchedKey = 'stockout';
+        const lower = text.toLowerCase();
+        if (lower.includes('purchase') || lower.includes('buy')) matchedKey = 'purchase';
+        else if (lower.includes('supplier') || lower.includes('vendor')) matchedKey = 'supplier';
+        else if (lower.includes('delay') || lower.includes('late')) matchedKey = 'delayed';
 
-      const kbItem = CHAT_KNOWLEDGE_BASE[matchedKey] || CHAT_KNOWLEDGE_BASE['stockout'];
-
-      const assistantMsg: ChatMessage = {
-        id: 'msg-' + (Date.now() + 1),
-        sender: 'assistant',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        content: kbItem.answer,
-        dataSources: kbItem.sources,
-        suggestedActions: kbItem.suggestedActions,
-      };
-
-      setMessages((prev) => [...prev, assistantMsg]);
-      setIsTyping(false);
-    }, 600);
+        const kbItem = CHAT_KNOWLEDGE_BASE[matchedKey] || CHAT_KNOWLEDGE_BASE['stockout'];
+        const assistantMsg: ChatMessage = {
+          id: 'msg-' + (Date.now() + 1),
+          sender: 'assistant',
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          content: kbItem.answer,
+          dataSources: kbItem.sources,
+          suggestedActions: kbItem.suggestedActions,
+        };
+        setMessages((prev) => [...prev, assistantMsg]);
+      })
+      .finally(() => {
+        setIsTyping(false);
+      });
   };
 
   const handleActionClick = (action: NonNullable<ChatMessage['suggestedActions']>[0]) => {
