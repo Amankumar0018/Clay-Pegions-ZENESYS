@@ -1,4 +1,4 @@
-# 🚀 MILEY — AI Supply Chain Copilot for NetSuite
+#  MILEY — AI Supply Chain Copilot for NetSuite
 
 > **NetSuite records what happened. MILEY predicts what happens next, explains why, recommends what to do, and turns that decision into action.**
 
@@ -8,16 +8,16 @@ Built for the **ZENESYS Hackathon**.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-* 📈 **Demand Forecasting** — Predict future product demand using XGBoost time-series ML models with P10/P90 confidence bounds.
-* ⚠️ **Inventory Risk Detection** — Detect stockout and overstock risks before operational impact.
-* 🛒 **Smart Procurement Recommendations** — Calculate Economic Order Quantity (EOQ), Safety Stock ($SS$), and Recommended Purchase Quantity (RPQ).
-* 🏆 **Multi-Criteria Vendor Ranking** — Evaluate suppliers using weighted scores (Price, Reliability %, Delivery Days, Quality %).
-* 🚚 **Order & Fulfillment Tracking** — Interactive shipment timeline stepper and delayed delivery alerts.
-* 🧪 **What-If Demand Simulator** — Stress-test supply chain against demand surges, lead time delays, and cost inflation.
-* 📊 **Model Evaluation Studio** — Empirical proof demonstrating ~38.4% WAPE accuracy improvement over moving average baselines.
-* 🤖 **Grounded AI Business Assistant** — Natural language interface retrieving live context to answer operational questions.
+*  **Demand Forecasting** — Predict future product demand using XGBoost time-series ML models with P10/P90 confidence bounds.
+*  **Inventory Risk Detection** — Detect stockout and overstock risks before operational impact.
+*  **Smart Procurement Recommendations** — Calculate Economic Order Quantity (EOQ), Safety Stock ($SS$), and Recommended Purchase Quantity (RPQ).
+*  **Multi-Criteria Vendor Ranking** — Evaluate suppliers using weighted scores (Price, Reliability %, Delivery Days, Quality %).
+*  **Order & Fulfillment Tracking** — Interactive shipment timeline stepper and delayed delivery alerts.
+*  **What-If Demand Simulator** — Stress-test supply chain against demand surges, lead time delays, and cost inflation.
+*  **Model Evaluation Studio** — Empirical proof demonstrating ~38.4% WAPE accuracy improvement over moving average baselines.
+*  **Grounded AI Business Assistant** — Natural language interface retrieving live context to answer operational questions.
 
 ---
 
